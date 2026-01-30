@@ -1,0 +1,36 @@
+spec:
+  containers:
+    - name: backend
+      image: /ontology_db/public/ontology_backend_image:latest
+      env:
+        SNOWFLAKE_ACCOUNT:
+          value: "{{ SNOWFLAKE_ACCOUNT }}"
+        SNOWFLAKE_USER:
+          value: "{{ SNOWFLAKE_USER }}"
+        SNOWFLAKE_PASSWORD:
+          value: "{{ SNOWFLAKE_PASSWORD }}"
+        SNOWFLAKE_WAREHOUSE:
+          value: "COMPUTE_WH"
+        SNOWFLAKE_DATABASE:
+          value: "ONTOLOGY_DB"
+        SNOWFLAKE_SCHEMA:
+          value: "PUBLIC"
+        SNOWFLAKE_ROLE:
+          value: "{{ SNOWFLAKE_ROLE }}"
+      resources:
+        requests:
+          memory: 2Gi
+          cpu: "1"
+        limits:
+          memory: 4Gi
+          cpu: "2"
+      readinessProbe:
+        httpGet:
+          path: /health
+          port: 8000
+        initialDelaySeconds: 10
+        periodSeconds: 10
+  endpoints:
+    - name: api
+      port: 8000
+      public: true

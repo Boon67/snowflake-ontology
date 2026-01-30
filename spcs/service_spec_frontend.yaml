@@ -1,0 +1,24 @@
+spec:
+  containers:
+    - name: frontend
+      image: /ontology_db/public/ontology_frontend_image:latest
+      env:
+        VITE_API_URL:
+          value: "http://ontology-backend-service:8000"
+      resources:
+        requests:
+          memory: 1Gi
+          cpu: "0.5"
+        limits:
+          memory: 2Gi
+          cpu: "1"
+      readinessProbe:
+        httpGet:
+          path: /
+          port: 80
+        initialDelaySeconds: 5
+        periodSeconds: 10
+  endpoints:
+    - name: web
+      port: 80
+      public: true
