@@ -4,6 +4,8 @@ A sophisticated ontology and workflow layer built natively on Snowflake, transfo
 
 ## 🚀 Quick Start
 
+**New to the project? Start here:** [QUICKSTART.md](QUICKSTART.md) - Get up and running in 10 minutes!
+
 ```bash
 # 1. Configure Snowflake connection
 snow connection add
@@ -19,6 +21,16 @@ cp .env.example .env
 # Frontend: https://[your-endpoint].snowflakecomputing.app
 # API Docs: https://[your-endpoint].snowflakecomputing.app/docs
 ```
+
+## 📚 Documentation
+
+| Document | Description |
+|----------|-------------|
+| **[QUICKSTART.md](QUICKSTART.md)** | ⚡ Get started in 10 minutes |
+| **[USER_GUIDE.md](USER_GUIDE.md)** | 📖 Complete user manual (100+ pages) |
+| **[DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)** | 🚀 Deployment & operations guide |
+| **[API_REFERENCE.md](API_REFERENCE.md)** | 📡 Complete API documentation |
+| **[README.md](README.md)** | 📘 This file - Architecture & overview |
 
 ## 📋 Table of Contents
 
@@ -804,8 +816,12 @@ This project is provided as-is for educational and demonstration purposes.
 
 ## Additional Documentation
 
-- **CONSOLIDATED_DOCUMENTATION.md**: Complete documentation with all Mermaid diagrams
-- **CURRENT_URL.md**: Current deployment URLs and status
+- **[QUICKSTART.md](QUICKSTART.md)**: 10-minute quick start guide
+- **[USER_GUIDE.md](USER_GUIDE.md)**: Complete user manual with tutorials
+- **[DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)**: Deployment, monitoring, and maintenance
+- **[API_REFERENCE.md](API_REFERENCE.md)**: Complete API documentation with examples
+- **[GITHUB_SETUP.md](GITHUB_SETUP.md)**: GitHub repository setup instructions
+- **[PUBLISHED_SUCCESS.md](PUBLISHED_SUCCESS.md)**: Publication success summary
 
 ---
 
